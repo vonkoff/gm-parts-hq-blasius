@@ -7,7 +7,9 @@ import { graphql } from '~/client/graphql';
 import { revalidate } from '~/client/revalidate-target';
 import { ProductCardCarousel } from '~/components/product-card-carousel';
 import { ProductCardCarouselFragment } from '~/components/product-card-carousel/fragment';
+import { CategoryGrid } from '~/components/category-grid'; // Import your new component
 import { Slideshow } from '~/components/slideshow';
+import { HeroSection } from '~/components/hero-section';
 import { LocaleType } from '~/i18n/routing';
 
 const HomePageQuery = graphql(
@@ -58,21 +60,22 @@ export default async function Home({ params: { locale } }: Props) {
 
   return (
     <>
-      <Slideshow />
-
+      {/* <Slideshow /> */}
+      <HeroSection />
+      <CategoryGrid />
       <div className="my-10">
-        <ProductCardCarousel
-          products={featuredProducts}
-          showCart={false}
-          showCompare={false}
-          title={t('Carousel.featuredProducts')}
-        />
-        <ProductCardCarousel
-          products={newestProducts}
-          showCart={false}
-          showCompare={false}
-          title={t('Carousel.newestProducts')}
-        />
+        {/* <ProductCardCarousel */}
+        {/*   products={featuredProducts} */}
+        {/*   showCart={false} */}
+        {/*   showCompare={false} */}
+        {/*   title={t('Carousel.featuredProducts')} */}
+        {/* /> */}
+        {/* <ProductCardCarousel */}
+        {/*   products={newestProducts} */}
+        {/*   showCart={false} */}
+        {/*   showCompare={false} */}
+        {/*   title={t('Carousel.newestProducts')} */}
+        {/* /> */}
       </div>
     </>
   );

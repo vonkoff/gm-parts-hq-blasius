@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --text-shadow-outline: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000,
+      2px 2px 4px rgba(0, 0, 0, 0.5);
+    --text-shadow-soft: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+}
+
+@layer utilities {
+  .text-shadow-outline {
+    text-shadow: var(--text-shadow-outline);
+  }
+
+  .text-shadow-soft {
+    text-shadow: var(--text-shadow-soft);
+  }
+}
