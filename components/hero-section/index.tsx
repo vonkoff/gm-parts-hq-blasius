@@ -10,7 +10,7 @@ export const HeroSection: React.FC = () => {
         alt="Automotive background"
         layout="fill"
         objectFit="cover"
-        quality={75}
+        quality={5}
         priority
       />
       {/* Overlay to dim the image */}
