@@ -7,6 +7,9 @@ const { cspHeader } = require('./lib/content-security-policy');
 
 /** @type {import('next').NextConfig} */
 let nextConfig = {
+  images: {
+    domains: ['images.pexels.com'],
+  },
   reactStrictMode: true,
   experimental: {
     optimizePackageImports: ['@icons-pack/react-simple-icons'],
